@@ -14,7 +14,14 @@ public class Professor {
     private String first_name;
     private String last_name;
     private String senha;
+    private String datahora;
     
+    public String getDatahora() {
+        return datahora;
+    }
+    public void setDatahora(String datahora) {
+        this.datahora = datahora;
+    }
     public int getId() {
         return id;
     }
