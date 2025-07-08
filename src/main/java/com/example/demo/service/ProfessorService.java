@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -18,8 +17,15 @@ public class ProfessorService {
     }
 
     public Professor salvar(Professor professor){
- 
         return professorRepository.save(professor);
+    }
+
+    public List<Professor> ver() {
+        return professorRepository.findAll();
+    }
+
+    public void excluir(int id) {
+        professorRepository.deleteById(id);
     }
 
 }
